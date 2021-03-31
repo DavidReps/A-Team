@@ -5,9 +5,10 @@ from .models import Profile
 
 
 class RegistrationForm(UserCreationForm):
-    username = forms.CharField(max_length=40, required=True)
+    username = forms.CharField(max_length=40, required=True, widget=forms.TextInput(attrs={'class': "form-row"}))
     password1 = forms.CharField(max_length=30, required=True)
     password2 = forms.CharField(max_length=30, required=True)
+    
     class Meta:
         model = User
         fields = ('username', 'password1', 'password2')
