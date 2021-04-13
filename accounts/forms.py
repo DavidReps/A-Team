@@ -19,3 +19,7 @@ class ClientCreationForm(forms.ModelForm):
         fields = ('first_name', 'last_name', 'email', 'password1', 'password2', 'major', 'completed_courses', 'housing_location')
 
 
+class BookSellerForm(forms.ModelForm):
+    class Meta:
+        model = Book
+        fields = ('title', 'author', 'edition', 'condition', 'course', 'price', 'isbn')
