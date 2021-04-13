@@ -21,4 +21,4 @@ class Book(models.Model):
     condition = models.CharField(max_length=40)
     course = models.CharField(max_length=40)
     price = models.DecimalField(max_digits=6, decimal_places=2)
-    isbn = models.IntegerField(max_length=40)
+    isbn = models.IntegerField()
